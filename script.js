@@ -1,3 +1,4 @@
 function sayHello() {
-    alert("Hi! Thanks for visiting my portfolio 😊");
+  document.getElementById("message").innerText =
+    "Hi! I'm Nainika. Thanks for visiting 😊";
 }
