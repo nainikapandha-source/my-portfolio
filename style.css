@@ -17,7 +17,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f5f5f5;
-  color: hwb(293 0% 97%);
+  color: #333; /* FIXED readability */
   margin-top: 70px;
   animation: fadeIn 1s ease-in;
 }
@@ -53,7 +53,7 @@ nav a {
 }
 
 nav a:hover {
-  color: hwb(0 20% 70%);
+  color: #d6a8ff; /* smoother purple */
 }
 
 /* Hero */
@@ -84,8 +84,9 @@ button, .btn {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  background: hsl(0, 19%, 31%);
+  background: #a66cff; /* nicer purple */
   color: white;
+  transition: 0.3s;
 }
 
 .btn-outline {
@@ -96,7 +97,7 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-  background: hsla(0, 100%, 65%, 0.505);
+  background: #8a4dff;
 }
 
 /* Sections */
@@ -115,7 +116,7 @@ section:hover {
 /* Headings */
 h1, h2, h3 {
   font-weight: 600;
-  color: hsl(292, 32%, 65%);
+  color: #7b3fe4;
 }
 
 /* Text */
@@ -150,9 +151,11 @@ p {
 
 /* Mobile */
 @media (max-width: 600px) {
+
   nav {
     flex-direction: column;
     align-items: center;
+    padding: 10px;
   }
 
   nav div {
@@ -161,7 +164,20 @@ p {
     margin-top: 10px;
   }
 
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
   section {
     margin: 15px;
+    padding: 20px;
+  }
+
+  button, .btn {
+    width: 100%;
   }
 }
