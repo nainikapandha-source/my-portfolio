@@ -1,31 +1,167 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: hwb(293 0% 97%);
+  margin-top: 70px;
+  animation: fadeIn 1s ease-in;
 }
 
-header {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
 }
 
+nav h2 {
+  color: white;
+}
+
+nav div {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: hwb(0 20% 70%);
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+/* Buttons */
+button, .btn {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background: hsl(0, 19%, 31%);
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+}
+
+button:hover, .btn:hover {
+  background: hsla(0, 100%, 65%, 0.505);
+}
+
+/* Sections */
 section {
-    padding: 30px;
-    margin: 20px;
-    background-color: white;
-    border-radius: 10px;
+  padding: 30px;
+  margin: 25px;
+  background-color: white;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-h2 {
-    color: #333;
+section:hover {
+  transform: scale(1.02);
 }
 
-button {
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
+/* Headings */
+h1, h2, h3 {
+  font-weight: 600;
+  color: hsl(292, 32%, 65%);
+}
+
+/* Text */
+p {
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Cards */
+.card, .project-card {
+  background: #f9f9f9;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover, .project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Projects section */
+.projects {
+  padding: 50px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav div {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  section {
+    margin: 15px;
+  }
 }
