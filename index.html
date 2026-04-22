@@ -3,21 +3,38 @@
 <head>
     <title>Nainika's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+<nav>
+  <h2 class="logo">My Portfolio</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-<header>
-    <h1>Nainika 👋</h1>
-    <p>Aspiring Web Developer</p>
+<header class="hero">
+  <div class="hero-content">
+    <h1>Hi, I'm Nainika 👋</h1>
+    <p>I design and build clean, user-friendly websites.</p>
+
+    <div class="buttons">
+      <a href="projects.html" class="btn">View Projects</a>
+      <a href="contact.html" class="btn-outline">Contact Me</a>
+    </div>
+  </div>
 </header>
 
-<section>
+<section id="about">
     <h2>About Me</h2>
-    <p>I am a fast learner with basic knowledge of Python, Java, and web development.</p>
+    <p>I am a fast learner passionate about web development. I enjoy building simple and user-friendly websites.</p>
 </section>
 
-<section>
+<section id="Skills">
     <h2>Skills</h2>
     <ul>
         <li>Python</li>
@@ -26,14 +43,22 @@
     </ul>
 </section>
 
-<section>
+<section id="Project">
     <h2>Project</h2>
-    <p>This portfolio website is built using HTML, CSS, and JavaScript.</p>
+    <p>This portfolio website is built using HTML, CSS, and JavaScript and deployed using GitHub Pages. It demonstrates my understanding of basic web development.</p>
+</section>
+
+<section id="Contact">
+    <h2>Contact</h2>
+    <p>Email: nainikapandha@gmail.com</p>
 </section>
 
 <section>
-    <button onclick="sayHello()">Say Hi</button>
+    <p id="message"></p>
+    <button onclick="sayHello()">Say Hi 👋</button>
 </section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
