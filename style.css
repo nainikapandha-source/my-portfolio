@@ -34,6 +34,8 @@ nav {
   align-items: center;
   padding: 15px 40px;
   z-index: 1000;
+
+  min-height: 70px; /* 👈 add this */
 }
 
 nav h2 {
